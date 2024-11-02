@@ -10,7 +10,7 @@ import lombok.*;
 @Entity
 @Table(name = "customer")
 
-public class customer {
+public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -26,4 +26,16 @@ public class customer {
 
     @Column(name = "password", nullable = false)
     private String password;
+
+    @Column(name = "addressLine_1", nullable = false)
+    private String addressLine1;
+
+    @Column(name = "addressLine_2", nullable = false)
+    private String addressLine2;
+
+    @Column(name = "city", nullable = false)
+    private String city;
+
+    @Column(name = "pincode", nullable = false)
+    private String pincode;
 }
